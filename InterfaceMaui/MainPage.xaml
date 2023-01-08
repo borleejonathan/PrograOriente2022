@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:Projet_2022"
+             x:Class="Projet_2022.MainPage">
+
+        
+    <ContentPage.Resources>
+        <drawable:Simulation x:Key="simulation" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+        <Label
+            Text="Bienvenue sur l'ecosystème!"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            HorizontalOptions="Center" />
+
+        <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="Rectangle 40,0,0,40"
+                Background="#2B0B98"
+                Padding="16,8"
+                HorizontalOptions="Center">
+                <GraphicsView 
+                    x:Name="graphics"
+                    Drawable="{StaticResource simulation}"
+                    HeightRequest="400"
+                    WidthRequest="600" />    
+        </Border>
+        
+
+    </VerticalStackLayout>
+
+</ContentPage>
